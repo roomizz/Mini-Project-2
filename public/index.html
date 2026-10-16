@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>ระบบสมาชิก</title>
+  <style>
+    body { font-family: sans-serif; max-width: 720px; margin: 2rem auto; padding: 0 1rem; }
+    form { display: grid; gap: 0.5rem; margin-bottom: 1.5rem; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { border: 1px solid #ccc; padding: 0.4rem; text-align: left; }
+    .success { color: green; }
+    .error { color: red; }
+  </style>
+</head>
+<body>
+  <h1>ระบบสมาชิก</h1>
+  <p id="message"></p>
+
+  <h2>สมัครสมาชิก</h2>
+  <form id="register-form">
+    <input name="username" placeholder="username (a-z, 0-9, _)" required>
+    <input name="name" placeholder="ชื่อ-นามสกุล" required>
+    <input name="email" type="email" placeholder="อีเมล" required>
+    <input name="password" type="password" placeholder="รหัสผ่าน (อย่างน้อย 8 ตัว)" minlength="8" required>
+    <button type="submit">สมัครสมาชิก</button>
+  </form>
+
+  <h2>เข้าสู่ระบบ</h2>
+  <form id="login-form">
+    <input name="username" placeholder="username" required>
+    <input name="password" type="password" placeholder="รหัสผ่าน" required>
+    <button type="submit">เข้าสู่ระบบ</button>
+  </form>
+
+  <h2>สมาชิกทั้งหมด</h2>
+  <table>
+    <thead>
+      <tr><th>username</th><th>ชื่อ</th><th>อีเมล</th><th>role</th><th></th></tr>
+    </thead>
+    <tbody id="user-table"></tbody>
+  </table>
+
+  <script src="script.js"></script>
+</body>
+</html>
