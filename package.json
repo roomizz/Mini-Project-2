@@ -1,0 +1,15 @@
+{
+  "name": "account-workshop",
+  "version": "1.0.0",
+  "description": "User Management System Web Application",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "node app.js"
+  },
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.19.2",
+    "mongodb": "^6.5.0"
+  }
+}
